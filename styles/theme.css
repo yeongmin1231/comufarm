@@ -21,7 +21,7 @@
   text-align: center;
   background: #ffffffdd;
   backdrop-filter: blur(4px);
-  padding: 70px 80px;
+  padding: 70px;
   border-radius: 18px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
