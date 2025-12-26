@@ -1,0 +1,275 @@
+/* ==========================================
+   Home (첫 화면)
+========================================== */
+.home-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e6efff 0%, #eaffea 100%);
+}
+
+.home-logo-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.welcome-box {
+  text-align: center;
+  background: #ffffffdd;
+  backdrop-filter: blur(4px);
+  padding: 70px 80px;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.home-title1 {
+  font-size: 62px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #9ab0c8;
+}
+
+.home-title2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #535353;
+}
+
+.home-title3 {
+  font-size: 62px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #88a683;
+}
+
+.home-desc {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 35px;
+}
+
+.home-select {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+/* 기업 */
+.select-company {
+  font-size: 40px;
+  background: #4b9fff;
+  color: white;
+}
+
+/* 농가 */
+.select-farmer {
+  background: #3ac45d;
+  color: white;
+}
+
+.select-btn {
+  min-width: 150px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.15s;
+}
+
+.select-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.select-company:hover {
+  background: #2f8fff;
+}
+
+.select-farmer:hover {
+  background: #15b246;
+}
+
+/* ==============================
+   Global
+================================ */
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+/* ==============================
+   Layout
+================================ */
+.main-layout {
+  min-height: 100vh;
+  display: flex;
+  padding: 20px;
+  gap: 16px;
+}
+
+/* 좌측 */
+.panel-left {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* 우측 */
+.panel-right {
+  flex: 2;
+}
+
+/* ==============================
+   Company / Farmer Theme
+================================ */
+.company-theme {
+  background-color: #e6efff;
+}
+.farmer-theme {
+  background-color: #eaffea;
+}
+
+/* ==============================
+   Panels
+================================ */
+.panel {
+  background: #ffffffd6;
+  backdrop-filter: blur(3px);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* ==============================
+   Section Title
+================================ */
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ==============================
+   Inputs & Controls
+================================ */
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+select, input {
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #b8c1d1;
+  padding: 6px 10px;
+  font-size: 15px;
+  background: white;
+}
+
+select:focus, input:focus {
+  outline: 2px solid #72b6ff;
+  border-color: #4b9fff;
+}
+
+/* ==============================
+   Buttons
+================================ */
+.btn {
+  background: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #9fb3d1;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.1s;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #f0f6ff;
+}
+
+.btn-add {
+  background: #4b9fff;
+  color: white;
+  border: none;
+}
+.btn-add:hover {
+  background: #2f8fff;
+}
+
+.btn-delete {
+  background: #ffdad6;
+  border: none;
+  color: #b70000;
+}
+.btn-delete:hover {
+  background: #ffb4ac;
+}
+
+/* ==============================
+   Graph Panel
+================================ */
+.graph-box {
+  background: #ffffffd6;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  padding: 18px;
+}
+
+/* ==============================
+   PC (1024 이상)
+================================ */
+@media (min-width: 1024px) {
+  .main-layout {
+    flex-direction: row;
+  }
+  .panel-left {
+    width: 60%;
+  }
+  .panel-right {
+    width: 40%;
+  }
+}
+
+/* ==============================
+   모바일 + 태블릿 (1023 이하)
+================================ */
+@media (max-width: 1023px) {
+  .main-layout {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .panel-left,
+  .panel-right {
+    width: 100%;
+  }
+  .input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  select, input {
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+    margin-top: 4px;
+  }
+}
